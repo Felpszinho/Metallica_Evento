@@ -1,0 +1,78 @@
+@use "colors";
+
+.event{  
+    font-size: 25px;
+    font-family: newrocker;
+   padding: 80px 0;
+   &--breve{
+    background-image: linear-gradient(colors.$colorWhite,colors.$colorgrey);
+ 
+     
+   }
+  &--local{
+   background-image: linear-gradient(colors.$colorgrey,colors.$colorWhite);
+
+    
+  }
+  &--classicos{
+    background-image: linear-gradient(colors.$colorWhite,colors.$colorgrey);
+  }
+  &--abertura{
+    background-image: linear-gradient(colors.$colorgrey,colors.$colorWhite);
+  }
+   &--image-left{
+    .container{
+        flex-direction: row-reverse;
+        
+    }
+    
+   }
+    .container{
+        display: flex;
+        gap: 40px;
+    }
+    &__image{
+        max-width: 360px;
+      
+
+    }
+       
+    &__details{
+      margin-right: 40px;
+     
+        &__title{
+           font-size: 18px;
+            font-weight: bold;
+            margin-bottom:16px;
+           
+            
+            
+            
+        }
+        &__description{
+        
+            line-height: 22px;
+        }
+    }
+    @media (max-width:640px) {
+
+     
+        
+        .container{
+            display: block;
+           
+        }
+        &__image{
+            width: 100%;
+        }
+        &__datails{
+            margin-right: 0;
+            margin-bottom: 16px;
+           
+            &__title{
+                font-size: 80px;
+                color: colors.$colroRed;
+            }
+        }
+    }
+}

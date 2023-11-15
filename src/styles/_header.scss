@@ -1,0 +1,103 @@
+@use "colors";
+
+.hero {
+    
+    
+    background-image: url('../images/metallica-fundo2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  
+    position: relative;
+    font-family: metal-mania;
+ 
+
+    .container {
+        position: relative;
+        text-align: center;
+     
+   
+   
+    
+    
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        content: '';
+        opacity: 0.9;
+    }
+ 
+  
+    &__text{
+  
+        color: colors.$colorWhite;
+        font-size: 80px;
+        text-align: center;
+     
+     
+        
+      
+      
+      
+    }
+   
+    
+  
+  
+}
+@media (max-width:640px) {
+    .hero{
+     max-width: 600px;
+     width: 100%;
+     
+     background-image: url(../images/metallica.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+
+     &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        content: '';
+        opacity: 0.9;
+    }
+    
+     &__img{
+         &--fundo{
+             max-width: 640px;
+             width: 100%;
+             height: 406px;
+             height: 100%;
+            
+       
+            
+           
+ 
+         }
+     }
+     &__text{
+   
+         color: colors.$colroRed;
+         font-size: 60px;
+         text-align: center;
+         margin-right: 50px;
+      
+      
+         
+       
+       
+       
+     }
+    
+  
+    }
+ }
